@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="http://www.hindustanuniv.ac.in">
+            <img src="Hindustan/ODD-SEM-2025-2026/HITS LOGO Water Mark.jpg" height="50px" width="50px" alt="logo of the institution">
+        </a>
+
+        <a href="#personal">Personal Info</a> |
+        <a href="#login">Login Info</a> |
+        <a href="#prefs">Preferences</a>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>User Registration Form</h2>
+        <form action="display.html" method="get">
+            
+            <fieldset id="personal">
+                <legend>Personal Details</legend>
+                Full Name:
+                <input type="text" name="fullname" size="30" required><br><br>
+
+                Email:
+                <input type="email" name="email" 
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                       required><br><br>
+
+                Mobile Number:
+                <input type="tel" name="mobile" 
+                       pattern="[6-9]{1}[0-9]{9}" 
+                       maxlength="10" required><br><br>
+
+                Date of Birth:
+                <input type="date" name="dob" required><br><br>
+
+                Gender:
+                <input type="radio" name="gender" value="Male" checked> Male
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Other"> Other<br><br>
+            </fieldset>
+
+            <fieldset id="login">
+                <legend>Login Details</legend>
+                Username:
+                <input type="text" name="username" maxlength="15" required><br><br>
+
+                Password:
+                <input type="password" name="password" minlength="6" maxlength="12" required><br><br>
+
+                Security Question:
+                <input list="questions" name="security_question" required>
+                <datalist id="questions">
+                    <option value="Your pet's name?">
+                    <option value="Your favorite color?">
+                    <option value="Your birthplace?">
+                </datalist><br><br>
+
+                Answer:
+                <input type="text" name="security_answer" required><br><br>
+            </fieldset>
+
+            <fieldset id="prefs">
+                <legend>Preferences</legend>
+                Country:
+                <select name="country" required>
+                    <option value="">--Select--</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select><br><br>
+
+                Receive Newsletter:
+                <input type="checkbox" name="newsletter" value="yes" checked> Yes<br><br>
+
+                Account Created On:
+                <input type="text" name="createdon" value="2025-07-04" readonly><br><br>
+            </fieldset>
+
+            <input type="submit" value="Register">
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p>&copy; 2025 My Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
